@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabNotesLayout"
+    android:orientation="vertical"
+    android:background="@drawable/background_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"> 
+    
+    <Button
+	   	android:text="@string/create_new_note" 
+	   	android:id="@+id/notes_start_note_editor_button" 
+	   	style="@style/MyBigButton">
+   	</Button>
+    
+    <ListView
+    	android:id="@+id/notesListView" 
+    	android:scrollbars="vertical"
+    	android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:layout_gravity="fill_vertical"
+		android:drawSelectorOnTop="false">		    
+    </ListView>
+</LinearLayout>

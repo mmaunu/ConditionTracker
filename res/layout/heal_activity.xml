@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/background_test" >
+   
+   	<Button 
+    	android:text="@string/apply_healing_now_button_text" 
+    	android:id="@+id/heal_activity_button"
+    	style="@style/MyBigButton"></Button>
+   	
+    <TextView 
+    	android:id="@+id/textView" 
+    	style="@style/TextSerif.Black"
+    	android:text="@string/heal_activity_directions"></TextView>
+    <EditText 
+    	android:id="@+id/heal_activity_textarea" 
+    	android:gravity="top"
+    	android:inputType="phone"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="100dip"></EditText>
+   
+    <RadioGroup
+    	android:layout_width="fill_parent"
+      	android:layout_height="wrap_content"
+      	android:id="@+id/surgeRadioGroup" 
+      	android:orientation="vertical">
+	    <RadioButton 
+	    	android:text="No surges...just the number entered" 
+	    	android:id="@+id/noSurgeRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+	    <RadioButton 
+	    	android:text="And spend one surge" 
+	    	android:id="@+id/plusSurgeRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+    	<RadioButton 
+	    	android:text="And spend two surges" 
+	    	android:id="@+id/plusTwoSurgesRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+	    <RadioButton 
+	    	android:text="'As If' you spent 1 surge...add surge value but don't spend a surge" 
+	    	android:id="@+id/asIfSurgeRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+	    <RadioButton 
+	    	android:text="'As If' you spent 2 surges...add surge values but don't spend a surge" 
+	    	android:id="@+id/asIfTwoSurgesRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+   	</RadioGroup>
+
+</LinearLayout>
+
+</ScrollView>

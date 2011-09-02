@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabDiceRollerLayout"
+    android:orientation="vertical"
+    android:background="@drawable/background_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"> 
+    
+    
+    //LinearLayout for QuickD20 and report area
+    <LinearLayout
+		android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:padding="2dip">	
+    
+    
+	  
+		//LinearLayout for the quick d20
+		<LinearLayout
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="vertical">	
+		    <ImageView
+		    	android:id="@+id/dice_roller_d20" 
+		    	android:src="@drawable/d20"
+		    	android:layout_width="60dip" 
+		    	android:layout_height="60dip"
+		    	android:hapticFeedbackEnabled="true"
+		    	android:gravity="center">
+		    	</ImageView>
+			<TextView
+				android:id="@+id/textViewUnmoddedD20" 
+		    	style="@style/TextSerif.Black"
+		    	android:gravity="center"
+		    	android:textSize="10sp"
+		    	android:text="@string/quick_d20"></TextView>
+		    	
+		    <ImageView
+		    	android:id="@+id/dice_roller_history_image" 
+		    	android:src="@drawable/ic_menu_agenda"
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center">
+		    	</ImageView>
+			<TextView
+				android:id="@+id/textViewHistory" 
+		    	style="@style/TextSerif.Black"
+		    	android:gravity="center"
+		    	android:textSize="10sp"
+		    	android:text="@string/view_history"></TextView>
+		</LinearLayout>
+	
+	
+		<EditText
+			android:id="@+id/diceRollerReportArea" 
+	    	android:lines="7"
+	    	android:editable="false"
+	    	android:textSize="14sp"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:gravity="left"/>
+	
+	</LinearLayout>
+    
+    
+    <ScrollView	
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/tabDiceExpressionBankScrollView">
+    
+    <TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName1" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+				android:layout_gravity="top"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"
+		    	android:text="Basic Attack Roll"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression1" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:layout_gravity="top"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	android:text="1d20+4"/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton1" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton1" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton1" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName2" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"
+		    	android:text="Basic Attack Dmg"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression2" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	android:text="1d8+4"/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton2" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton2" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton2" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName3" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression3" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton3" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton3" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton3" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>    
+	
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName4" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression4" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton4" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton4" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton4" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName5" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression5" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton5" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton5" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton5" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName6" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression6" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton6" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton6" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton6" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+	
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName7" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression7" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton7" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton7" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton7" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+	
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName8" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression8" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton8" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton8" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton8" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName9" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression9" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton9" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton9" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton9" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+		
+		<ImageView style="@style/HorizontalRule"/>
+		
+		<TableRow android:paddingTop="3dip">
+			<TextView
+				android:id="@+id/diceRollerTextName10" 
+				android:textColor="#ff0000"
+				android:gravity="center_vertical"
+		    	android:layout_width="75dip" 
+		    	android:layout_height="fill_parent"/>
+			<TextView
+				android:id="@+id/diceRollerTextExpression10" 
+		    	android:layout_width="110dip" 
+		    	android:layout_height="fill_parent"
+		    	android:gravity="center_vertical"
+		    	android:textColor="#000000"
+		    	/>
+		    <Button 
+		    	android:text="Roll" 
+		    	android:id="@+id/diceRollerRollButton10" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Edit" 
+		    	android:id="@+id/diceRollerEditButton10" 
+		    	style="@style/DiceRollerTabButtons"/>
+		    <Button 
+		    	android:text="Max" 
+		    	android:id="@+id/diceRollerMaxButton10" 
+		    	style="@style/DiceRollerTabButtons"/>
+		</TableRow>
+	
+		<ImageView style="@style/HorizontalRule"/>
+		
+	</TableLayout>
+    
+    </ScrollView>
+
+    
+    
+    
+    	
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#FF007814</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="red">#FFBE0C10</color>
+    <color name="redHPBorder">#FF7F0000</color>
+    <color name="yellow">#FFFFD500</color>
+    <color name="orange">#FFA500</color>
+    <color name="lightGray">#DCDCDC</color>
+    <color name="gray">#C0C0C0</color>
+</resources>

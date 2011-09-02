@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_test" >
+    
+    <Button 
+    	android:text="@string/done" 
+    	android:id="@+id/configure_settings_activity_done_button" 
+    	style="@style/MyBigButton"></Button>
+		    
+	<ScrollView 
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+		
+		//the only child of the scrollview
+		<LinearLayout
+			android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent">
+		    <TableLayout
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent" >
+			    <TableRow>
+			    	<TextView 
+				    	android:id="@+id/textView5" 
+				    	style="@style/TextSerif.Black"		    	
+				    	android:text="@string/character_name"></TextView>
+			    	<EditText 
+				    	android:id="@+id/config_character_name" 
+				    	android:gravity="left"
+				    	android:hint="@string/enter_optional_character_name"
+				    	android:imeOptions="actionDone|flagNoExtractUi"
+				    	android:layout_height="wrap_content" 
+				    	android:layout_width="fill_parent"></EditText>
+			    </TableRow>
+			    
+			    <TableRow>
+					    <TextView 
+					    	android:id="@+id/textView1" 
+					    	style="@style/TextSerif.Black"
+					    	android:text="@string/maximum_hit_points"></TextView>
+					    <EditText 
+					    	android:id="@+id/config_max_hit_points" 
+					    	android:gravity="left"
+					    	android:inputType="phone"
+					    	android:hint="@string/required"
+					    	android:layout_height="wrap_content" 
+					    	android:layout_width="wrap_content"></EditText>
+					
+				</TableRow>
+				<TableRow>
+					    <TextView 
+					    	android:id="@+id/textView4" 
+					    	style="@style/TextSerif.Black"
+					    	android:text="@string/maximum_number_of_surges"></TextView>
+					    <EditText 
+					    	android:id="@+id/config_max_number_surges" 
+					    	android:gravity="left"
+					    	android:inputType="phone"
+					    	android:hint="@string/required"
+					    	android:layout_height="wrap_content" 
+					    	android:layout_width="wrap_content"></EditText>
+				</TableRow>
+				
+				<TableRow>
+					    <TextView 
+					    	android:id="@+id/textView3" 
+					    	style="@style/TextSerif.Black"
+					    	android:text="@string/surge_value"></TextView>
+					    <EditText 
+					    	android:id="@+id/config_surge_value" 
+					    	android:gravity="left"
+					    	android:hint="@string/leave_blank_for_1_4_of_maximum"
+					    	android:inputType="phone"
+					    	android:layout_height="wrap_content" 
+					    	android:layout_width="wrap_content"></EditText>
+				</TableRow>
+				
+				<TableRow>
+					    <TextView 
+					    	android:id="@+id/textView23" 
+					    	style="@style/TextSerif.Black"
+					    	android:text="@string/power_points"></TextView>
+					    <EditText 
+					    	android:id="@+id/config_power_points" 
+					    	android:gravity="left"
+					    	android:hint="@string/optional_number"
+					    	android:inputType="phone"
+					    	android:layout_height="wrap_content" 
+					    	android:layout_width="wrap_content"></EditText>
+				</TableRow>
+		    </TableLayout>
+		    
+		    
+		   
+		    	
+		   
+		    
+		    
+		    
+		    //action point reminder stuff
+			<TextView 
+		    	android:id="@+id/textView4" 
+		    	style="@style/TextSerif.Black"
+		    	android:text="@string/action_pt_reminder"></TextView>
+		    <EditText 
+		    	android:id="@+id/config_action_point_reminder" 
+		    	android:gravity="left"
+		    	android:hint="@string/enter_optional_reminder_of_action_point_features"
+		    	android:lines="6"
+		    	android:imeOptions="actionDone|flagNoExtractUi"
+		    	android:layout_height="wrap_content" 
+		    	android:layout_width="fill_parent"></EditText>
+		
+		</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

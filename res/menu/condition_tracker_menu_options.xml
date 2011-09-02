@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<item android:id="@+id/options_menu_new_character"
+		android:icon="@drawable/ic_menu_add"
+		android:title="New Character"
+		/>
+		
+	<item android:id="@+id/options_menu_save_character"
+		android:icon="@drawable/ic_menu_save"
+		android:title="Save Character"
+		/>
+	
+	<item android:id="@+id/options_menu_load_character"
+		android:icon="@drawable/ic_menu_allfriends"
+		android:title="Open Character"
+		/>
+	
+	<item android:id="@+id/options_menu_configure_character"
+		android:icon="@drawable/ic_menu_edit"
+		android:title="Update Stats"
+		/>
+		
+	<item android:id="@+id/options_menu_extended_rest"
+		android:icon="@drawable/ic_menu_refresh"
+		android:title="Extended Rest"
+		/>
+		
+	<item android:id="@+id/options_menu_dice_roller_help"
+		android:icon="@drawable/ic_menu_help"
+		android:title="Dice Roller Help"
+		/>
+ 
+</menu> 

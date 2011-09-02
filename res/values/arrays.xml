@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="badConditionPenaltyValue">
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+        <item>-6</item>
+        <item>-7</item>
+        <item>-8</item>
+        <item>-9</item>
+        <item>-10</item>
+    </string-array>
+    
+    <string-array name="badConditionPenaltyToWhat">
+        <item>Attack</item>
+        <item>AC</item>
+        <item>All Defs</item>
+        <item>NonAC Ds</item>
+        <item>Fort</item>
+        <item>Reflex</item>
+        <item>Will</item>
+        <item>Damage</item>
+        <item>Saves</item>
+    </string-array>
+
+
+	<string-array name="goodConditionBonusValue">
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+        <item>+4</item>
+        <item>+5</item>
+        <item>+6</item>
+        <item>+7</item>
+        <item>+8</item>
+        <item>+9</item>
+        <item>+10</item>
+    </string-array>
+
+
+	<string-array name="goodConditionBonusToWhat">
+        <item>Attack</item>
+        <item>Damage</item>
+        <item>AC</item>
+        <item>All Defs</item>
+        <item>NonAC Ds</item>
+        <item>Fort</item>
+        <item>Reflex</item>
+        <item>Will</item>        
+        <item>Saves</item>
+        <item>Speed</item>
+    </string-array>
+    
+    <string-array name="goodConditionResistDamageTypes">
+        <item>All</item>
+        <item>Necrotic</item>
+        <item>Fire</item>
+        <item>Cold</item>
+        <item>Radiant</item>
+        <item>Acid</item>
+        <item>Force</item>        
+        <item>Lightning</item>        
+        <item>Poison</item>
+        <item>Psychic</item>
+        <item>Thunder</item>
+    </string-array>
+
+
+	<string-array name="conditionGlossaryKeys">
+		<item>Just Blank...there are reasons...leave first entry blank in values</item>
+		<item>Ongoing Damage</item>
+        <item>Dazed</item>
+        <item>Stunned</item>
+        <item>Marked</item>
+        <item>Slowed</item>
+        <item>Immobilized</item>
+        <item>Restrained</item>        
+        <item>Dominated</item>        
+        <item>Weakened</item>
+        <item>Blinded</item>
+        <item>Helpless</item>
+        <item>Petrified</item>
+        <item>Grabbed</item>
+        <item>Prone</item>
+        <item>Unconscious</item>	
+	</string-array>
+	
+	
+	<string-array name="conditionGlossaryValues">
+		<item>Not used...but the order of these values must match the order of the keys above</item>
+		<item>You take the specified amount and type of damage at the start of your turn.</item>
+        <item>You grant combat advantage. You can only take one action: either a standard, move or minor action (but as many free actions as you like). You can\'t take immediate or opportunity actions. You can\'t flank.</item>
+        <item>You grant combat advantage. You can take any actions except actions that are designated as \'No Action\'. You can\'t flank.</item>
+        <item>You take a -2 penalty to attack roles if you don\'t target the creature that marked you.</item>
+        <item>Your speed is decreased to 2. This applies to all forms of movement that you have but does not affect forced movement.</item>
+        <item>You can\'t move but you can be pushed, pulled or slid and you can teleport.</item>
+        <item>You grant combat advantage. You take a -2 penalty to all attack rolls. You can\'t move but you can teleport. You can NOT be pushed, pulled or slid.</item>        
+        <item>You are dazed. The dominating creature chooses your one action. The only powers it can make you use are at-will powers.</item>        
+        <item>Your attacks deal half damage (add everything up and then halve it). This does NOT affect any ongoing damage that you deal.</item>
+        <item>You grant combat advantage. You can\'t see any target (they have total concealment, giving you a -5 to attack if you know where to attack). You take a -10 to Perception. You can\'t flank.</item>
+        <item>You grant combat advantage. You can be hit with a coup de grace.</item>
+        <item>You are turned to stone. You are unaware of your surroundings, don\'t age, can\'t take actions, and resist 20 to all damage.</item>
+        <item>You can\'t move but you can be pushed, pulled or slid and you can teleport.</item>
+        <item>You grant combat advantage to those making melee attacks. You have a -2 penalty to attack rolls. You get a +2 bonus to all defenses vs. ranged attacks from non-adjacent enemies. You are lying on the ground. If you are flying, you safely descend a distance equal to your speed; if you are still in the air, you fall the remaining distance.</item>
+        <item>You grant combat advantage and have a -5 penalty to all defenses. You can be the subject of a coup de grace. You fall prone. You can\'t provide flanking. You can\'t take any actions.</item>	
+	</string-array>
+
+</resources>

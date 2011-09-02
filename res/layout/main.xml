@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabMainLayout"	
+	android:background="@drawable/background_test"
+	android:orientation="vertical"
+   	android:layout_width="fill_parent"
+   	android:layout_height="fill_parent">
+   	
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+		
+		
+		<com.maunumental.dnd.conditiontracker.HitPointDisplayView
+			android:layout_height="fill_parent" 
+	    	android:layout_width="60dip"
+	    	android:id="@+id/hitPointDisplayView"/>
+		
+		
+		
+		
+		//this LinearLayout houses everything except the vertical hit point bar
+		<LinearLayout 
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+		    
+		  
+			
+			//this linear layout here houses all of the controls...it uses other LL to do so
+			<LinearLayout
+				android:layout_height="wrap_content" 
+			    android:layout_width="fill_parent"
+			    android:orientation="horizontal">
+				
+				//beginning of the LL for the HP Controls
+				<LinearLayout
+					android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"
+				    android:orientation="vertical">
+			    	<TextView
+				    	style="@style/TextSerif.Black"
+				    	android:text="     Hit Points"
+				    	android:textSize="15sp"/>
+					<LinearLayout
+						android:layout_height="wrap_content" 
+					    android:layout_width="wrap_content"
+					    android:orientation="horizontal">	
+						<ImageView
+					    	android:layout_height="50dip" 
+					    	android:layout_width="2dip"/>
+						<com.maunumental.dnd.conditiontracker.HitPointsMinusControlView 
+					    	android:layout_height="50dip" 
+					    	android:layout_width="60dip" 
+					    	android:id="@+id/hitPointsMinusControlView"/>
+					    <ImageView
+					    	android:layout_height="50dip" 
+					    	android:layout_width="2dip"/>
+					    <com.maunumental.dnd.conditiontracker.HitPointsPlusControlView 
+					    	android:layout_height="50dip" 
+					    	android:layout_width="60dip" 
+					    	android:id="@+id/hitPointsPlusControlView"/>
+					   </LinearLayout>
+				</LinearLayout>
+				
+				
+				//buffer
+				<ImageView
+			    	android:layout_height="50dip" 
+			    	android:layout_width="2dip"/>
+				
+				
+				//beginning of the Temp HP Control
+				<LinearLayout
+				android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:orientation="vertical">
+			    	<TextView
+				    	style="@style/TextSerif.Black"
+				    	android:text=" Temps"
+				    	android:textSize="15sp"/>
+					<com.maunumental.dnd.conditiontracker.TempHitPointControlView 
+				    	android:layout_height="50dip" 
+				    	android:layout_width="60dip" 
+				    	android:id="@+id/tempHPControlView"/>
+				</LinearLayout>
+				
+				
+				//buffer
+				<ImageView
+			    	android:layout_height="50dip" 
+			    	android:layout_width="2dip"/>
+			    	
+			    
+					
+				//beginning of the Surge Control
+				<LinearLayout
+				android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"
+			    android:orientation="vertical">
+			    	<TextView
+				    	style="@style/TextSerif.Black"
+				    	android:text=" Surges"
+				    	android:textSize="15sp"/>
+					<com.maunumental.dnd.conditiontracker.SurgeNumberView 
+				    	android:layout_height="50dip" 
+				    	android:layout_width="60dip" 
+				    	android:id="@+id/surgeNumberView"/>
+				</LinearLayout>	
+				
+				
+				
+				
+				
+				
+				
+					 
+			//end of the LL for the first row of controls
+			</LinearLayout>	
+						
+			
+			//LL for the other controls (action point, conditions, power points)
+			<LinearLayout
+			 	android:orientation="horizontal"
+			 	android:paddingTop="5dip"
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content">
+		    	
+		    	//beginning of the Action Point Control
+				<LinearLayout
+					android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"
+				    android:orientation="vertical">
+			    	<TextView
+				    	style="@style/TextSerif.Black"
+				    	android:text="Act Pts"
+				    	android:textSize="15sp"/>
+					<com.maunumental.dnd.conditiontracker.ActionPointNumberView 
+				    	android:layout_height="50dip" 
+				    	android:layout_width="60dip" 
+				    	android:id="@+id/actionPointNumberView"/>
+				</LinearLayout>
+				
+				//buffer
+				<ImageView
+			    	android:layout_height="50dip" 
+			    	android:layout_width="2dip"/>
+				
+				//the condition controls	
+		    	<LinearLayout
+		    		android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"
+				    android:orientation="vertical">
+			    	<TextView
+			    		android:text="    Conditions"
+			    		android:id="@+id/textView4"
+			    		android:textSize="15sp"
+				    	style="@style/TextSerif.Black">
+			    
+			    	</TextView>
+			    	<LinearLayout
+			    		android:layout_height="wrap_content" 
+					    android:layout_width="wrap_content"
+					    android:orientation="horizontal">
+				    	<com.maunumental.dnd.conditiontracker.AddBadConditionView
+					    	android:id="@+id/main_screen_add_bad_condition_button" 
+					    	android:layout_width="60dip" 
+					    	android:layout_height="50dip"/>
+				    	//buffer
+				    	<ImageView
+					    	android:layout_height="50dip" 
+					    	android:layout_width="2dip"/>
+				    	<com.maunumental.dnd.conditiontracker.AddGoodConditionView
+					    	android:id="@+id/main_screen_add_good_condition_button" 			  
+					    	android:layout_width="60dip" 
+					    	android:layout_height="50dip"/> 
+				   
+				    </LinearLayout>
+			    //end of condition controls
+		    	</LinearLayout>
+		    	
+		    	//buffer
+				<ImageView
+			    	android:layout_height="50dip" 
+			    	android:layout_width="2dip"/>
+		    	
+		    	//beginning of the power point control
+				<LinearLayout
+					android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"
+				    android:orientation="vertical">
+			    	<TextView
+				    	style="@style/TextSerif.Black"
+				    	android:text="Pwr Pts"
+				    	android:textSize="15sp"
+				    	android:id="@+id/powerPointTextView"/>
+					<com.maunumental.dnd.conditiontracker.PowerPointNumberView 
+				    	android:layout_height="50dip" 
+				    	android:layout_width="60dip" 
+				    	android:id="@+id/powerPointNumberView"/>
+				</LinearLayout>
+		    	
+		    </LinearLayout>
+		    
+		    
+		    <ListView
+		    	android:id="@+id/conditionListView" 
+		    	android:scrollbars="vertical"
+		    	android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:layout_gravity="fill_vertical"
+				android:drawSelectorOnTop="false">		    
+		    </ListView>
+				
+		//end of main panel's LL...the one that houses everything but the bar
+		</LinearLayout>
+	//this is the end of the LL that has the hitpoint display and then everything else next to it
+	</LinearLayout>
+//end of the top most LL
+</LinearLayout>
+
+

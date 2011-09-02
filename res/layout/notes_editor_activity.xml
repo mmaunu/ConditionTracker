@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_test" > 
+    
+    <Button
+	   	android:text="@string/click_to_save_note" 
+	   	android:id="@+id/notes_editor_save_note_button" 
+	   	style="@style/MyBigButton">
+   	</Button>
+   	
+  	
+    <LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="6dip">
+	    
+	    <TextView
+	    	style="@style/TextSerif.Black"
+	    	android:text="@string/title_required_"/>
+	    <EditText
+	    	android:id="@+id/notes_editor_title_edit"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:imeOptions="actionNext|flagNoExtractUi"/>	       
+    </LinearLayout>
+	    
+	<TextView
+    	style="@style/TextSerif.Black"
+    	android:text="@string/body_of_note_"/>
+	
+	
+		
+    <EditText
+	    	android:id="@+id/notes_editor_body_edit"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:minLines="25"
+			android:gravity="top"
+			android:textSize="15sp"
+			android:scrollbars="vertical"/>
+		    
+	  
+</LinearLayout>

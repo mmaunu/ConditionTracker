@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:background="@drawable/background_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+	//don't scroll the button or the condition ends spinner
+	<Button
+	   	android:text="@string/add_condition" 
+	   	android:id="@+id/add_good_condition_activity_button" 
+	   	style="@style/MyBigButton">
+   	</Button>
+   	
+   	<LinearLayout
+		android:orientation="horizontal"
+		android:padding="10dip"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/texter"
+			android:text="Until: "
+			style="@style/TextSerif.Black"></TextView>
+		<Spinner 
+			android:id="@+id/add_good_condition_how_condition_ends"
+			android:prompt="@string/condition_ends_on_"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"></Spinner>
+	</LinearLayout>
+   	
+   	
+   	
+   	//just a horizontal rule...
+	<ImageView	
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="#FF808A87" />
+		
+		
+   	<ScrollView 
+   		android:id="@+id/addGoodConditionScrollView"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+	//the scrollview's child
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+
+
+		//generic +x bonus to blah section
+		<LinearLayout
+			android:orientation="horizontal"
+			android:padding="10dip"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			<CheckBox 
+		    	style="@style/TextSerif.Black"
+		    	android:text="@string/bonus_of"
+		    	android:id="@+id/add_good_condition_bonus_checkbox" ></CheckBox>
+			
+			<Spinner
+				android:id="@+id/add_good_condition_spinner_bonus_value"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:drawSelectorOnTop="true"	        
+	        	android:prompt="@string/bonus_of"					
+			/>
+			
+			
+			<TextView 
+				android:id="@+id/textView1" 
+		    	style="@style/TextSerif.Black"
+		    	android:text="@string/to"
+			/>
+			<Spinner
+				android:id="@+id/add_good_condition_spinner_bonus_to_what"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:drawSelectorOnTop="true"	        
+	        	android:prompt="@string/bonus_to_what_"
+			/>
+		</LinearLayout>
+	
+		//this is the "bonus modified by" section
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			//buffer
+			<ImageView
+				android:layout_width="60dip"
+				android:layout_height="wrap_content"/>
+			<CheckBox
+				android:id="@+id/add_good_condition_bonus_mod_by_checkbox"
+				android:textSize="12sp"
+				style="@style/TextSerif.Black"
+				android:text="@string/mod_bonus_by"/>
+			<EditText
+				android:id="@+id/add_good_condition_bonus_mod_by_edit"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:imeOptions="actionDone|flagNoExtractUi"
+				android:hint="@string/bonus_mod_by_hint"/>
+		</LinearLayout>
+		
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			//buffer
+			<ImageView
+				android:layout_width="60dip"
+				android:layout_height="wrap_content"/>
+			<CheckBox
+				android:id="@+id/add_good_condition_bonus_within_checkbox"
+				android:textSize="12sp"
+				style="@style/TextSerif.Black"
+				android:text="@string/within"/>
+			<EditText
+				android:id="@+id/add_good_condition_bonus_within_edit"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:imeOptions="actionDone|flagNoExtractUi"
+				android:hint="@string/_5_squares_of_or_sight_of"/>
+		</LinearLayout>
+	
+	
+		//another horizontal rule
+		<ImageView
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="#FF808A87" />
+	
+	
+		//beginning of damage resistance
+		<LinearLayout
+			android:orientation="horizontal"
+			android:padding="10dip"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content">
+			<CheckBox 
+		    	style="@style/TextSerif.Black"
+		    	android:text="@string/resist"
+		    	android:id="@+id/add_good_condition_resist_checkbox" ></CheckBox>
+			
+			<EditText
+				android:id="@+id/add_good_condition_resist_amount_edit"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:drawSelectorOnTop="true"
+		        android:inputType="phone"        
+	        	android:hint="@string/amount"					
+			/>
+			
+			
+			<TextView 
+				android:id="@+id/textView1" 
+		    	style="@style/TextSerif.Black"
+		    	android:text="@string/to"
+			/>
+			<Spinner
+				android:id="@+id/add_good_condition_spinner_resist_damage_types"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:drawSelectorOnTop="true"	        
+	        	android:prompt="@string/damage_type"
+			/>
+		</LinearLayout>
+	
+		//just a horizontal rule...
+		<ImageView	
+			android:layout_width="fill_parent"
+			android:layout_height="2dip"
+			android:background="#FF808A87" />
+	
+		//beginning of custom
+		<LinearLayout
+			android:orientation="horizontal"
+			android:padding="10dip"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+			<CheckBox 
+		    	style="@style/TextSerif.Black" 
+		    	android:text="@string/custom"
+		    	android:id="@+id/add_good_condition_custom_checkbox"></CheckBox>
+			
+			<EditText
+				android:id="@+id/add_good_condition_custom_edit"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:lines="2"
+		        android:drawSelectorOnTop="true"
+		        android:imeOptions="actionDone|flagNoExtractUi"
+	        	android:hint="@string/enter_custom_condition"					
+			/>
+		</LinearLayout>
+	
+	//end of the scrollview's child
+	</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

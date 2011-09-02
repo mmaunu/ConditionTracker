@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_test"  >
+    
+    <Button 
+    	android:text="@string/damage_button_text" 
+    	android:id="@+id/damage_activity_done_button" 
+    	style="@style/MyBigButton"></Button>
+    
+    <TextView 
+    	android:id="@+id/textView1" 
+    	style="@style/TextSerif.Black"
+    	android:text="@string/damage_activity_directions"></TextView>
+    <EditText 
+    	android:id="@+id/damage_activity_textarea" 
+    	android:gravity="top"
+    	android:inputType="phone"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="100dip"></EditText>
+
+	<LinearLayout android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >    
+	    <CheckBox 
+	    	android:text="@string/damage_activity_lose_surge_checkbox_text" 
+	    	android:id="@+id/damage_activity_lose_surge_checkbox" 
+	    	style="@style/TextSerif.Black"></CheckBox>
+	    
+    
+    	<Spinner 
+			android:id="@+id/damage_lose_surges_number_spinner"
+			android:prompt="@string/number_of_surges"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"></Spinner>
+			
+		<TextView
+			android:id="@+id/textView2" 
+	    	style="@style/TextSerif.Black"
+	    	android:text="surges"></TextView>
+	</LinearLayout>
+    
+</LinearLayout>
+</ScrollView>

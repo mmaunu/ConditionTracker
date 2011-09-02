@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:background="@drawable/scroll_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+	
+	//just a buffer for now///////////////////////////////////////////////
+	<ImageView
+		android:layout_height="wrap_content"
+		android:layout_width="13dip">
+	
+	</ImageView>
+	
+	
+	
+	
+	
+	////////////////////////////////////////////////////////////////////////
+	
+	<LinearLayout
+		android:orientation="vertical"		
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
+		<TextView 
+			style="@style/TextSerif.Black"
+			android:textSize="20sp" 
+		    android:ellipsize="marquee"
+		    android:text="testing" 
+		    android:id="@+id/notes_list_row_layout_title"/>
+	    <TextView 
+			style="@style/TextSerif.Black" 
+		    android:text="testing" 
+		    android:ellipsize="end"
+		    android:singleLine="true"
+		    android:textSize="10sp"
+		    android:id="@+id/notes_list_row_layout_body"
+	    />
+    </LinearLayout>
+</LinearLayout>

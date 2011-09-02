@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_gravity="center"
+	android:background="@drawable/background_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+   
+    <Button
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/diceRollerDoneButton"
+    	android:textSize="22sp"
+    	android:padding="10dip"
+    	android:text="Click Here to Save Expression"/>
+    
+    <TextView
+		style="@style/TextSerif.Black"
+    	android:gravity="center_vertical"
+    	android:text="Enter an expression (with the custom keyboard) and an optional name. Press the button above to save the expression and return to the roller." 
+    	android:id="@+id/diceRollerKeyboardExpressionTopDirections" 
+    	android:padding="2dip"/>
+    
+    //just a horizontal rule...
+	<ImageView style="@style/HorizontalRule" />
+	
+	<TableLayout
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+		<TableRow>
+		    <TextView
+		    	style="@style/TextSerif.Black"
+		    	android:text="Expression: "
+		    	/>
+			<EditText
+				android:layout_height="wrap_content" 
+		    	android:layout_width="fill_parent"
+		    	android:background="#ffffff"
+		    	android:textColor="#000000"
+		    	android:editable="false"
+		    	android:gravity="center_vertical"
+		    	android:hint="Try something like 1d8+5"
+		    	android:id="@+id/diceRollerKeyboardExpressionDisplay" 
+		    	android:padding="6dip"/>
+		</TableRow>
+		 
+	    
+	    //just a horizontal rule...
+		<ImageView	style="@style/HorizontalRule"/>
+	    <TableRow>
+		    <TextView
+		    	style="@style/TextSerif.Black"
+		    	android:text="Name: "
+		    	/>
+		    <EditText
+		    	android:layout_height="30dip" 
+		    	android:layout_width="fill_parent"
+		    	android:background="#ffffff"
+		    	android:textColor="#000000"
+		    	android:gravity="left"
+		    	android:hint="Enter a name (optional)"
+		    	android:imeOptions="actionDone|flagNoExtractUi"
+		    	android:id="@+id/diceRollerKeyboardNameEdit" 
+		    	android:padding="3dip"/>
+	    </TableRow>
+    
+    </TableLayout>
+    
+    
+    //just a horizontal rule...
+	<ImageView style="@style/HorizontalRule" />
+    
+    <ScrollView	
+		android:id="@+id/diceRollerCustomKeyboardScrollView"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">	
+   	
+   	//the scrollview's only child
+   	<LinearLayout
+    	android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+    
+	    <TableLayout
+	    	android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:visibility="invisible"
+		    android:id="@+id/diceRollerCustomKeyboardTableLayout">
+		    
+		    //first row of buttons...1,2,3,-,D
+		    <TableRow>	    
+		    	<com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey1" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey2" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey3" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyMinus" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyD" 
+			    	android:padding="5dip"/>
+		    	
+		    </TableRow>
+		    
+		    //second row of buttons...4,5,6,+,C
+		    <TableRow>
+		    
+		    	<com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey4" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey5" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey6" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyPlus" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyCrit" 
+			    	android:padding="5dip"/>
+		    
+		    </TableRow>
+		    
+		    
+		    //third row of buttons...7,8,9,DELETE,r
+		    <TableRow>
+		    
+		    	<com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey7" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey8" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey9" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyDelete" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyReroll" 
+			    	android:padding="5dip"/>
+		    
+		    </TableRow>
+		
+		
+			//last row of buttons...spacer,CLEAR,0,DONE,spacer
+		    <TableRow>
+		    	
+		    	<com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyEmpty1" 
+			    	android:padding="5dip"/>
+		    	<com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKey0" 
+			    	android:padding="5dip"/>    	    		    	
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyEmpty2" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyClear" 
+			    	android:padding="5dip"/>
+			    <com.maunumental.dnd.conditiontracker.DiceRollerSingleKeyView
+					android:layout_height="60dip" 
+			    	android:layout_width="60dip"
+			    	android:id="@+id/diceRollerKeyEmpty3" 
+			    	android:padding="5dip"/>
+			    
+		    
+		    </TableRow>
+		</TableLayout>
+	
+    
+    	//just a horizontal rule...
+		<ImageView	style="@style/HorizontalRule"/>
+		
+		<TextView
+			style="@style/TextSerif.Black"
+	    	android:gravity="center_vertical"
+	    	android:text="1d8r1+5 means roll 1d8, rerolling 1's, and then add 5." 
+	    	android:id="@+id/diceRollerKeyboardExpressionUsageHints1" 
+	    	android:padding="2dip"/>
+	    <TextView
+			style="@style/TextSerif.Black"
+	    	android:gravity="center_vertical"
+	    	android:text="1d12r2+1d6+5 would reroll 1's and 2's on the d12 only." 
+	    	android:id="@+id/diceRollerKeyboardExpressionUsageHints2" 
+	    	android:padding="2dip"/>
+	    <TextView
+			style="@style/TextSerif.Black"
+	    	android:gravity="center_vertical"
+	    	android:text="1d20c19+15 rolls 1d20+15, notifies of crits on 19 or 20." 
+	    	android:id="@+id/diceRollerKeyboardExpressionUsageHints3" 
+	    	android:padding="2dip"/>
+	    <TextView
+			style="@style/TextSerif.Black"
+	    	android:gravity="center_vertical"
+	    	android:text="You can't put rerolls on a d20 or crits on non-d20 dice." 
+	    	android:id="@+id/diceRollerKeyboardExpressionUsageHints3" 
+	    	android:padding="2dip"/>
+    </LinearLayout>	
+	</ScrollView>
+
+</LinearLayout>

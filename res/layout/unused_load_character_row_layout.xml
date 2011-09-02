@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+	
+	//just a buffer for now///////////////////////////////////////////////
+	
+	
+	
+	<TextView 
+		android:textSize="20sp"
+	    style="@style/TextSerif.Black"		    
+	    android:text="testing" 
+	    android:id="@+id/load_character_list_row_layout_text"/>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:background="@drawable/background_test"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+	<TextView
+	   	android:text="Tap a character name to open the character. Long-press a name to delete the character." 
+	   	style="@style/TextSerif.Black"
+	   	android:textSize="20sp"
+	   	android:padding="10dip">
+   	</TextView>
+   	
+   	//horizontal rule
+   	<ImageView
+   		android:layout_width="fill_parent"
+   		android:layout_height="2dip"
+   		android:background="#000000"/>
+   		
+   	<ListView  
+         android:id="@android:id/list"
+         style="@style/TextSerif.Black"
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+         android:padding="3dip"
+         />
+     <TextView android:id="@android:id/empty"
+         style="@style/TextSerif.Black"
+         android:textSize="18sp"
+         android:text="There are no saved characters. Press the 'back' key and then use the 'Add Character' menu option."
+         />
+</LinearLayout>

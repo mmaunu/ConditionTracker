@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_test" >
+    
+    <Button 
+    	android:text="Click to Enter the Number" 
+    	android:id="@+id/power_point_activity_button" 
+    	style="@style/MyBigButton"
+    	></Button>
+    <TextView 
+    	android:id="@+id/textView" 
+    	style="@style/TextSerif.Black"
+    	android:text="How many power points?"></TextView>
+    <RadioGroup
+    	android:layout_width="fill_parent"
+      	android:layout_height="wrap_content"
+    	android:id="@+id/power_point_radio_group"
+    	android:orientation="vertical">
+    	<RadioButton
+    		android:text="1 Power Point" 
+	    	android:id="@+id/onePowerPointRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+	    <RadioButton
+    		android:text="2 Power Points" 
+	    	android:id="@+id/twoPowerPointsRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+	    <RadioButton
+    		android:text="3 Power Points" 
+	    	android:id="@+id/threePowerPointsRadioButton" 
+	    	style="@style/TextSerif.Black"></RadioButton>
+    		
+    </RadioGroup>
+    
+
+</LinearLayout>
+

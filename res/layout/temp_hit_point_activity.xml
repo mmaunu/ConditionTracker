@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_test" >
+    
+    <Button 
+    	android:text="@string/buffer_me_up" 
+    	android:id="@+id/temp_hit_point_activity_button" 
+    	style="@style/MyBigButton"
+    	></Button>
+    <TextView 
+    	android:id="@+id/textView" 
+    	style="@style/TextSerif.Black"
+    	android:text="@string/how_many_temporary_hit_points_"></TextView>
+    <EditText 
+    	android:id="@+id/temp_hit_point_activity_edittext" 
+    	android:gravity="top"
+    	android:inputType="phone"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="100dip"></EditText>
+    
+    
+
+</LinearLayout>
+
